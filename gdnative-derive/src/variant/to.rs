@@ -73,7 +73,7 @@ pub(crate) fn expand_to_variant(
         impl #generics #trait_path for #ident #generics #where_clause {
             fn #to_variant_fn(#to_variant_receiver) -> ::gdnative::core_types::Variant {
                 use #trait_path;
-                use ::gdnative::core_types::FromVariant;
+                use ::gdnative::core_types::{ToVariant, FromVariant};
 
                 #return_expr
             }
